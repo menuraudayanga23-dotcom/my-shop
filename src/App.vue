@@ -172,7 +172,17 @@ async function fetchProducts() {
 async function fetchCategories() {
   const res = await fetch('https://dummyjson.com/products/categories')
   const data = await res.json()
-  categories.value = data.map((c: { slug: string }) => c.slug)
+  const allowedCategories = [
+  'smartphones',
+  'laptops',
+  'beauty',
+  'fragrances',
+  'furniture',
+  'groceries'
+]
+categories.value = data
+  .map((c: { slug: string }) => c.slug)
+  .filter((slug: string) => allowedCategories.includes(slug))
 }
 
 function addToCart(product: Product) {
