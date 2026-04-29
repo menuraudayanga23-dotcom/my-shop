@@ -57,7 +57,7 @@
             @click="selectedProduct = product"
             class="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-blue-400 transition cursor-pointer overflow-hidden"
           >
-            <img :src="product.thumbnail" :alt="product.title" class="w-full h-44 object-cover" />
+            <img :src="product.thumbnail" :alt="product.title" class="w-full h-64 object-cover" />
             <div class="p-4">
               <h3 class="font-semibold text-gray-900 dark:text-white truncate">{{ product.title }}</h3>
               <p class="text-sm text-gray-500 dark:text-gray-400 capitalize mb-2">{{ product.category }}</p>
